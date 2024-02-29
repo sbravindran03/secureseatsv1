@@ -67,7 +67,7 @@ const Desktop = () => {
           <p className="m-0">SEATS</p>
         </span>
       </div>
-      <main className="self-stretch rounded bg-black flex flex-col items-center justify-start pt-1 px-3 pb-[33px] box-border gap-[24px_0px] max-w-full shrink-0 z-[1] text-left text-base text-shades-white font-manrope mq450:pb-5 mq450:box-border mq925:pt-5 mq925:pb-[21px] mq925:box-border">
+      <main className="self-stretch rounded bg-black flex flex-col items-center justify-start  px-10 pb-[400px] box-border gap-[24px_0px] max-w-full shrink-0 z-[1] text-left text-base text-shades-white font-manrope mq450:pb-5 mq450:box-border mq925:pt-5 mq925:pb-[21px] mq925:box-border">
         <div className="self-stretch flex flex-row flex-wrap items-start justify-start gap-[0px_8px] max-w-full text-[20px]">
           <div className="h-6 w-6 rounded box-border flex flex-row items-center justify-center py-2 px-[3px] border-[1px] border-solid border-neutral-200">
             <img
@@ -123,7 +123,7 @@ const Desktop = () => {
           <button className="cursor-pointer [border:none] py-1.5 px-3 bg-neutral-100 h-11 w-[102px] rounded flex flex-row items-center justify-center box-border whitespace-nowrap hover:bg-lightgray">
             <div className="w-[54px] relative text-base font-semibold font-manrope text-neutral-500 text-center inline-block">{`IMAGE `}</div>
           </button>
-          <div className="flex-1 rounded box-border flex flex-row items-center justify-center py-1.5 px-2 gap-[0px_4px] min-w-[355px] min-h-[44px] max-w-full border-[1px] border-solid border-darkslategray mq450:min-w-full">
+          <div className="rounded box-border flex flex-row items-center justify-center py-1.5 px-2 gap-[0px_4px] min-w-[355px] min-h-[44px] max-w-full border-[1px] border-solid border-darkslategray mq450:min-w-full">
             <img
               className="h-5 w-5 relative"
               loading="lazy"
@@ -131,7 +131,7 @@ const Desktop = () => {
               src="/left-icon.svg"
             />
             <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-0.5 box-border max-w-[calc(100%_-_24px)]">
-              <div className="relative font-semibold whitespace-pre-wrap">{`UPLOAD THE BANNER IMAGE  OF THE EVENT `}</div>
+              <div className="relative font-semibold whitespace-pre-wrap hover:bg-blue-600">{`UPLOAD THE BANNER IMAGE  OF THE EVENT `}</div>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ const Desktop = () => {
           <div className="h-11 w-[102px] rounded bg-neutral-100 flex flex-row items-center justify-center py-1.5 px-3 box-border whitespace-nowrap">
             <div className="w-[54px] relative font-semibold inline-block">{`IMAGE `}</div>
           </div>
-          <div className="flex-1 rounded box-border flex flex-row items-center justify-center py-1.5 px-2 gap-[0px_4px] min-w-[296px] min-h-[44px] max-w-full text-left text-shades-white border-[1px] border-solid border-steelblue-100">
+          <div className=" rounded box-border flex flex-row items-center justify-center py-1.5 px-5 gap-[0px_4px] min-w-[350px] min-h-[44px] max-w-full text-left text-shades-white border-[1px] border-solid hover:bg-blue-600">
             <img className="h-5 w-5 relative" alt="" src="/left-icon-1.svg" />
             <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-1">
               <UploadImage/>
@@ -150,13 +150,14 @@ const Desktop = () => {
           <div className="h-11 w-[102px] rounded bg-neutral-100 flex flex-row items-center justify-center py-1.5 px-3 box-border">
             <div className="relative font-semibold">Cancel</div>
           </div>
-          <div className="flex-1 rounded box-border flex flex-row items-center justify-center py-1.5 px-2 gap-[0px_4px] min-w-[127px] min-h-[44px] max-w-full text-left text-shades-white border-[1px] border-solid border-steelblue-100">
+          <div className=" rounded box-border flex flex-row items-center justify-center py-1.5 px-2 gap-[0px_4px] min-w-[127px] min-h-[44px] max-w-full text-left text-shades-white border-[1px] border-solid">
             <img className="h-5 w-5 relative" alt="" src="/left-icon.svg" />
-            <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-0.5">
-              <div className="relative font-semibold">Create Event</div>
+            <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-0.5 cursor-pointer">
+  <div className="relative font-semibold bg-b-500 text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-600">
+    Create Event
+  </div>
             </div>
-          </div>
-        </div>
+          </div> </div>
       </main>
     </div>
   );
