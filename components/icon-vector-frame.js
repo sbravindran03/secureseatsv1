@@ -20,7 +20,6 @@ const IconVectorFrame = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <footer className="self-stretch flex flex-col items-center justify-center max-w-full text-left text-mini text-khaki-200 font-manrope bg-black">
         <div className="self-stretch flex flex-row items-start justify-start relative max-w-full">
-          {/* ... (your existing code for images) ... */}
           <img
             className="h-2.5 w-2.5 absolute !m-[0] top-[0px] right-[14px]"
             loading="lazy"
@@ -57,27 +56,42 @@ const IconVectorFrame = () => {
               </div>
             </div>
 
-            {/* Additional code for dropdown/select input */}
-           
-
-            {/* Additional code for text inputs */}
-            
-              <div className="flex-1 flex flex-col items-start justify-start min-w-[454px] max-w-full mq700:min-w-full">
+            {/* First set of location inputs */}
+            <div className="flex-1 flex flex-col items-start justify-start min-w-[454px] max-w-full mq700:min-w-full">
               <div className="self-stretch h-10 rounded box-border flex flex-row items-center justify-start py-2 pr-[1px] pl-[7px] max-w-[200px] border-[1px] border-solid border-neutral-200">
+                <input
+                  className="w-full [border:none] [outline:none] font-manrope text-sm bg-[transparent] h-[19px] flex-1 relative text-shades-white text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap min-w-[250px]"
+                  placeholder="LOCATION 1"
+                  type="text"
+                  value={location1}
+                  onChange={(e) => setLocation1(e.target.value)}
+                />
+              </div>
+            </div>
+
+            {/* Second set of input fields */}
+            <div className="self-stretch box-border flex flex-row flex-wrap items-start justify-start gap-[0px_12px] max-w-full border-[1px] border-solid border-shades-white">
+              <div className="flex-1 flex flex-col items-start justify-start min-w-[454px] max-w-full mq700:min-w-full">
+                <div className="self-stretch h-10 rounded box-border flex flex-row items-center justify-start py-2 pr-[9px] pl-[7px] max-w-full border-[1px] border-solid border-neutral-200">
                   <input
-                    className="w-full [border:none] [outline:none] font-manrope text-sm bg-[transparent] h-[19px] flex-1 relative text-shades-white text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap min-w-[250px] "
-                    placeholder="LOCATION 1"
+                    className="w-full [border:none] [outline:none] font-manrope text-sm bg-[transparent] h-[19px] flex-1 relative text-shades-white text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap min-w-[250px] max-w-full"
+                    placeholder="TOTAL NUMBER OF SEATS ON THE EVENT"
                     type="text"
-                    value={location1}
-                    onChange={(e) => setLocation1(e.target.value)}
                   />
                 </div>
               </div>
-
-             
+              <div className="flex-1 flex flex-col items-start justify-start min-w-[454px] max-w-full mq700:min-w-full">
+                <div className="self-stretch h-10 rounded box-border flex flex-row items-center justify-start py-2 pr-[9px] pl-[7px] max-w-full border-[1px] border-solid border-neutral-200">
+                  <input
+                    className="w-full [border:none] [outline:none] font-manrope text-sm bg-[transparent] h-[19px] flex-1 relative text-neutral-500 text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap min-w-[250px] max-w-full"
+                    placeholder="100000"
+                    type="text"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        
+        </div>
       </footer>
     </LocalizationProvider>
   );

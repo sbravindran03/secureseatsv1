@@ -1,4 +1,46 @@
+import React, { useState , useEffect } from 'react';
+import Web3 from 'web3';
+
 const FrameComponent = () => {
+  const [isWalletConnected, setWalletConnected] = useState(false);
+  const [web3, setWeb3] = useState(null);
+
+  useEffect(() => {
+    // Check if Web3 is already injected
+    if (typeof window.ethereum !== 'undefined') {
+      const newWeb3 = new Web3(window.ethereum);
+
+      setWeb3(newWeb3);
+
+      window.ethereum.on('accountsChanged', (accounts) => {
+        if (accounts.length > 0) {
+          setWalletConnected(true);
+        } else {
+          setWalletConnected(false);
+        }
+      });
+    }
+  }, []);
+
+  const connectWallet = async () => {
+    try {
+      // Check if MetaMask is installed
+      if (window.ethereum) {
+        // Request account access and open MetaMask popup
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        console.log('Connected accounts:', accounts);
+  
+        // Once connected, set the state to true
+        setWalletConnected(true);
+      } else {
+        console.error('MetaMask not installed.');
+      }
+    } catch (error) {
+      // Handle errors
+      console.error('Error connecting wallet:', error);
+    }
+ 
+  };
   return (
     <div className="w-[1534px] bg-black flex flex-row items-end justify-between pt-0 pb-px pr-px pl-1 box-border max-w-full gap-[20px] z-[1] text-left text-smi-9 text-white font-inter mq1050:flex-wrap absolute top-0">
       <div className="h-[27.9px] w-[109.5px] relative hidden" />
@@ -59,10 +101,15 @@ const FrameComponent = () => {
             alt=""
             src="/link.svg"
           />
-          <div className="flex-[0.9339] flex flex-col items-start justify-start py-0 pr-[13px] pl-0 box-border min-w-[82px] mq450:flex-1">
-            <button className="cursor-pointer pt-[9px] pb-2 pr-[5px] pl-2 bg-[transparent] self-stretch h-[38px] rounded-[99.59px] box-border flex flex-row items-center justify-center border-[1px] border-solid border-deepskyblue hover:bg-steelblue-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-steelblue-100">
-              <div className="relative text-smi-9 leading-[19.42px] font-semibold font-inter text-white text-left">
-                Connect wallet
+              <div className="flex-[0.9339] flex flex-col items-start justify-start py-0 pr-[13px] pl-0 box-border min-w-[82px] mq450:flex-1">
+            <button
+              onClick={connectWallet}
+              className={`cursor-pointer pt-[9px] pb-2 pr-[5px] pl-2 bg-[transparent] self-stretch h-[38px] rounded-[99.59px] box-border flex flex-row items-center justify-center border-[1px] border-solid ${
+                isWalletConnected ? 'border-green-500' : 'border-deepskyblue'
+              } hover:bg-steelblue-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-steelblue-100`}
+            >
+              <div className="relative text-smi-9 leading-[19.42px] font-semibold font-inter text-white text-left" onClick={connectWallet}>
+                {isWalletConnected ? 'Connected' : 'Connect Wallet'}
               </div>
             </button>
           </div>
@@ -77,5 +124,15 @@ const FrameComponent = () => {
     </div>
   );
 };
+export async function getStaticPaths() {
+  // Fetch dynamic data and return an array of paths
+  // Example: return { paths: [{ params: { slug: 'example' } }], fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch data for the specific path
+  // Example: const data = fetchData(params.slug);
+  // return { props: { data } };
+}
 
 export default FrameComponent;
