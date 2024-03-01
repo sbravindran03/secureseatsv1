@@ -58,14 +58,7 @@ const FrameComponent = () => {
             </div>
           </div>
           <button className="cursor-pointer pt-1.5 pb-2 pr-2.5 pl-[13px] bg-[transparent] rounded-[99.59px] flex flex-row items-end justify-start gap-[0px_7px] border-[1px] border-solid border-gray-300 hover:bg-gainsboro-300 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-200 relative top-4">
-            <img
-              className="h-[23.9px] w-[23.9px] relative overflow-hidden shrink-0"
-              alt=""
-              src="/svg.svg"
-            />
-            <div className="relative text-smi-9 leading-[19.42px] font-semibold font-inter text-white text-left">
-              Events in Chennai
-            </div>
+           z
           </button>
         </div>
       </div>
