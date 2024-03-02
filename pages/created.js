@@ -1,5 +1,7 @@
 import FrameComponent from "../components/frame-component";
 import AboutTabFrame from "../components/about-tab-frame";
+import Link from 'next/link';
+
 
 const Desktop = () => {
   return (

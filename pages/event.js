@@ -3,6 +3,10 @@ import NameOfEvent from "../components/name-of-event";
 import IconVectorFrame from "../components/icon-vector-frame";
 import UploadImage from "../components/upload";
 
+import React from 'react';
+import Link from 'next/link';
+
+
 const Desktop = () => {
   return (
     <div className="w-full h-[1024px] relative bg-black overflow-hidden flex flex-col items-end justify-start pt-0 px-0 pb-8 box-border gap-[18px_0px] tracking-[normal] text-left text-smi-9 text-shades-white font-inter mq925:h-auto">
@@ -130,9 +134,17 @@ const Desktop = () => {
               alt=""
               src="/left-icon.svg"
             />
-            <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-0.5 box-border max-w-[calc(100%_-_24px)]">
-              <div className="relative font-semibold whitespace-pre-wrap hover:bg-blue-600">{`UPLOAD THE BANNER IMAGE  OF THE EVENT `}</div>
-            </div>
+          <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-0.5 box-border max-w-[calc(100%_-_24px)]">
+  <label htmlFor="bannerImage" className="relative font-semibold whitespace-pre-wrap hover:bg-blue-600">
+    UPLOAD THE BANNER IMAGE OF THE EVENT
+    <input
+      type="file"
+      id="bannerImage"
+      accept="image/*"
+      className="sr-only" // Use "sr-only" class to hide the default file input styling
+    />
+  </label>
+</div>
           </div>
         </div>
         <div className="self-stretch flex flex-row flex-wrap items-center justify-start gap-[0px_16px] max-w-full text-center text-neutral-500">
@@ -153,9 +165,11 @@ const Desktop = () => {
           <div className=" rounded box-border flex flex-row items-center justify-center py-1.5 px-2 gap-[0px_4px] min-w-[127px] min-h-[44px] max-w-full text-left text-shades-white border-[1px] border-solid">
             <img className="h-5 w-5 relative" alt="" src="/left-icon.svg" />
             <div className="overflow-hidden flex flex-row items-center justify-center py-0 px-0.5 cursor-pointer">
-  <div className="relative font-semibold bg-b-500 text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-600">
-    Create Event
-  </div>
+            <Link href="/created"> {/* Specify the path to the created.js page */}
+        <a className="relative font-semibold bg-b-500 text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-600">
+          Create Event
+        </a>
+      </Link>
             </div>
           </div> </div>
       </main>

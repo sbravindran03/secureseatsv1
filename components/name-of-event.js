@@ -7,9 +7,11 @@ const NameOfEvent = () => {
         </div>
        
         <div className="self-stretch rounded box-border flex items-center justify-start py-1 pr-2 pl-2 max-w-[500px] text-sm text-shades-white border-[1px] border-solid border-shades-white">
-  <div className="h-[19px] overflow-hidden text-ellipsis whitespace-nowrap max-w-full">
-    Name of event
-  </div>
+ <input
+  type="text"
+  className="self-stretch rounded box-border flex items-center justify-start py-1 pr-2 pl-2  text-white bg-black overflow-hidden text-ellipsis whitespace-nowrap max-w-full"
+  placeholder="Name of event"
+/>
 </div>
 
       </div>

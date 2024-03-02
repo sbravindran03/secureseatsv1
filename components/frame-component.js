@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import Web3 from 'web3';
+import Category from './city';
 
 const FrameComponent = () => {
   const [isWalletConnected, setWalletConnected] = useState(false);
@@ -71,14 +72,8 @@ const FrameComponent = () => {
         <div className="flex-1 flex flex-row items-start justify-center gap-[0px_15px] min-w-[248px] max-w-full shrink-0 mq450:flex-wrap">
           <div className="flex-1 flex flex-col items-start justify-start py-0 pr-[5px] pl-0 box-border min-w-[85px]">
             <button className="cursor-pointer py-[7px] pr-3.5 pl-3 bg-black rounded-[99.59px] flex flex-row items-start justify-start gap-[0px_5px] border-[1px] border-solid border-deepskyblue">
-              <img
-                className="h-[23.9px] w-[23.9px] relative overflow-hidden shrink-0"
-                alt=""
-                src="/svg.svg"
-              />
-              <div className="relative text-smi-9 leading-[19.42px] capitalize font-semibold font-inter text-white text-left">
-                chennai
-              </div>
+            
+            <Category/>
               <div className="flex flex-col items-start justify-start pt-[9px] pb-0 pr-px pl-0">
                 <img
                   className="w-3 h-[7px] relative overflow-hidden shrink-0"
@@ -106,12 +101,7 @@ const FrameComponent = () => {
               </div>
             </button>
           </div>
-          <img
-            className="h-[37.8px] w-[39.8px] relative rounded-[99.59px] min-h-[38px]"
-            loading="lazy"
-            alt=""
-            src="/link.svg"
-          />
+         
         </div>
       </div>
     </div>

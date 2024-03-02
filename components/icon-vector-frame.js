@@ -73,11 +73,11 @@ const IconVectorFrame = () => {
             <div className="self-stretch box-border flex flex-row flex-wrap items-start justify-start gap-[0px_12px] max-w-full border-[1px] border-solid border-shades-white">
               <div className="flex-1 flex flex-col items-start justify-start min-w-[454px] max-w-full mq700:min-w-full">
                 <div className="self-stretch h-10 rounded box-border flex flex-row items-center justify-start py-2 pr-[9px] pl-[7px] max-w-full border-[1px] border-solid border-neutral-200">
-                  <input
-                    className="w-full [border:none] [outline:none] font-manrope text-sm bg-[transparent] h-[19px] flex-1 relative text-shades-white text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap min-w-[250px] max-w-full"
-                    placeholder="TOTAL NUMBER OF SEATS ON THE EVENT"
-                    type="text"
-                  />
+                 <div
+    className="w-full border-none outline-none font-manrope text-sm bg-transparent h-19px flex-1 relative text-shades-white text-left inline-block overflow-hidden text-ellipsis whitespace-nowrap min-w-250px max-w-full font-bold"
+>
+    TOTAL NUMBER OF SEATS ON THE EVENT
+</div>
                 </div>
               </div>
               <div className="flex-1 flex flex-col items-start justify-start min-w-[454px] max-w-full mq700:min-w-full">
