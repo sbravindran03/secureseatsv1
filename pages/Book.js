@@ -50,7 +50,7 @@ const Desktop = () => {
                 <div className="w-[1280px] grid flex-row items-start justify-start pt-0 px-0 pb-2 box-border gap-[0px_40px] max-w-full grid-cols-[repeat(3,_minmax(300px,_1fr))] text-base text-gray-100 mq750:gap-[0px_40px] mq750:grid-cols-[minmax(300px,_1fr)] mq1050:justify-center mq1050:grid-cols-[repeat(2,_minmax(300px,_520px))]">
                   <div className="rounded-xl bg-khaki box-border flex flex-col items-center justify-start pt-px px-0 pb-2.5 gap-[10px_0px] max-w-full border-[1px] border-solid border-whitesmoke-100">
                     <Link
-                      figureHttps3A2F2Fmediains="/figure--https3a2f2fmediainsiderin2fimage2fupload2fc-crop2cg-custom2fv17018635422fl4qcz34qq39hfz136btfjpg@2x.png"
+                      figureHttps3A2F2Fmediains="/anderson.png"
                       experiences="Experiences"
                     />
                     <div className="self-stretch flex flex-row items-start justify-start py-0 px-[9px]">

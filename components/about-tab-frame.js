@@ -6,7 +6,7 @@ const AboutTabFrame = () => {
             className="w-[654.2px] h-[347.1px] relative overflow-hidden shrink-0 max-w-full"
             loading="lazy"
             alt=""
-            src="/figure--picture--https3a2f2fmediainsiderin2fimage2fupload2fc-crop2cg-custom2fv17018635422fl4qcz34qq39hfz136btfjpg.svg"
+            src="/anderson.png"
           />
           <div className="w-[959px] box-border flex flex-row items-center justify-start pt-0 px-0 pb-0.5 max-w-full shrink-0 border-b-[1.1px] border-solid border-whitesmoke">
             <div className="h-[38px] w-[72px] flex flex-col items-start justify-end pt-0 px-0 pb-0 box-border">
