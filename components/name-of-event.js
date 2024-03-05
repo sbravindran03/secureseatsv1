@@ -15,7 +15,7 @@ const NameOfEvent = () => {
 </div>
 
       </div>
-      <div className="self-stretch relative text-sm font-light text-neutral-500 text-right">
+      <div className="self-stretch relative text-sm font-light text-neutral=-500 text-right">
         0/30
       </div>
     </section>
