@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-const Link = ({ figureHttps3A2F2Fmediains, experiences, propWidth }) => {
+const Lop = ({ figureHttps3A2F2Fmediains, experiences, propWidth }) => {
   const spancardGenreStyle = useMemo(() => {
     return {
       width: propWidth,
@@ -27,4 +27,4 @@ const Link = ({ figureHttps3A2F2Fmediains, experiences, propWidth }) => {
   );
 };
 
-export default Link;
+export default Lop;

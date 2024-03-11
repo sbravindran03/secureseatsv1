@@ -1,5 +1,6 @@
 import NavHome from "../components/navhome";
-import Head from 'next/head'; // Import Head from Next.js
+import Head from 'next/head';
+import Link from 'next/link'; // Import Head from Next.js
 
 const Desktop = () => {
   return (
@@ -26,13 +27,17 @@ const Desktop = () => {
         evolution.
       </div>
       {/* Button for booking tickets */}
-      <button className="absolute top-[600px] left-[119px] bg-red-500 text-white px-7 py-4 rounded-md cursor-pointer mr-4">
+      <Link href="/Book"> <button className="absolute top-[600px] left-[119px] bg-red-500 text-white px-7 py-4 rounded-md cursor-pointer mr-4">
         Book Tickets
-      </button>
+      </button></Link>
+     
       {/* Button for creating an event */}
-      <button className="absolute top-[600px] left-[405px] bg-green-500 text-white px-7 py-4 rounded-md cursor-pointer">
-        Create Event
-      </button>
+     
+<Link href="/event" >
+  <button className="absolute top-[600px] left-[405px] bg-green-500 text-white px-7 py-4 rounded-md cursor-pointer">
+    Create Event
+  </button>
+</Link>
     </div>
   );
 };
