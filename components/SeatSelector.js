@@ -1,7 +1,9 @@
-// SeatSelector.js
 import { useState } from 'react';
+import { useRouter } from 'next/router'; // Import the useRouter hook
 
 const SeatSelector = () => {
+  const router = useRouter(); // Initialize the useRouter hook
+
   const totalRows = 10;
   const seatsPerRow = 10;
   const totalSeats = totalRows * seatsPerRow;
@@ -27,6 +29,7 @@ const SeatSelector = () => {
     // Handle booking logic here
     // You can use the selectedSeats array for the selected seats
     console.log("Booked Seats:", selectedSeats);
+    router.push('/nft');
   };
 
   return (
@@ -66,7 +69,6 @@ const SeatSelector = () => {
           background-color: #001B6A;
           color: white;
           display: flex;
-          
           align-items: center;
           justify-content: center;
           margin: 2px;
@@ -78,7 +80,7 @@ const SeatSelector = () => {
         }
 
         .book-button {
-            position: fixed;
+          position: fixed;
           margin-top: 570px;
           margin-left: 434px;
           padding: 14px;
@@ -90,18 +92,18 @@ const SeatSelector = () => {
         }
 
         .cancel-button {
-            position: fixed;
-            margin-right: 50px;
-            left: 500px; /* Adjust the left position as needed */
-            bottom: 65px; /* Adjust the bottom position as needed */
-            padding: 14px;
-            padding-right: 20px;
-            background-color: #FFDE7C;
-            color: black;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-          }
+          position: fixed;
+          margin-right: 50px;
+          left: 500px; /* Adjust the left position as needed */
+          bottom: 65px; /* Adjust the bottom position as needed */
+          padding: 14px;
+          padding-right: 20px;
+          background-color: #FFDE7C;
+          color: black;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
       `}</style>
     </div>
   );

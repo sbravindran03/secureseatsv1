@@ -53,7 +53,7 @@ const EventLink = () => {
     Back
   </button>
 </NextLink>
-              <NextLink href="/buy">
+              <NextLink href="/time">
   <button className="relative leading-[16px] uppercase bg-ec1066 text-white py-2 px-4 rounded-md bg-pink-600" >
     Buy now
   </button>

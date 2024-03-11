@@ -1,3 +1,5 @@
+import Link from 'next/link'; // Import the Link component
+
 const AboutTabFrame = () => {
     return (
       <div className="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2 box-border max-w-full text-left text-xl-5 text-shades-white font-inter">
@@ -40,11 +42,15 @@ const AboutTabFrame = () => {
                 </p>
               </span>
             </div>
-            <div className="w-[277px] rounded-[3.57px] bg-khaki-100 overflow-hidden shrink-0 flex flex-row items-center justify-center py-4 px-3.5 box-border whitespace-nowrap text-center text-2xl-4 text-black">
-              <div className="relative tracking-[3.57px] leading-[24.98px] uppercase">
-                see your event
-              </div>
-            </div>
+            <div className="w-[277px] rounded-[3.57px] bg-khaki-100 overflow-hidden shrink-0 flex flex-row items-center justify-center py-4 px-3.5 box-border whitespace-nowrap text-center text-2xl-4 text-white hover:to-blue-600">
+    <Link href="/Book"> {/* Use Link for navigation */}
+      <a>
+        <div className="relative tracking-[3.57px]  uppercase text-white hover:to-blue-500">
+          see your event
+        </div>
+      </a>
+    </Link>
+  </div>
           </div>
         </div>
       </div>
