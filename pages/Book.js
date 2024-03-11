@@ -103,7 +103,7 @@ const Desktop = () => {
                         ₹999 Onwards
                       </b>
                       <div className="flex flex-row items-center justify-end py-0 pr-0 pl-2.5 text-2xs-8 border-l-[1px] border-solid border-deepskyblue">
-                      <NextLink href="/buy">
+                      <NextLink href="/panel">
   <button className="relative leading-[16px] uppercase bg-ec1066 text-white py-2 px-4 rounded-md bg-pink-600" >
     Buy now
   </button>
@@ -159,7 +159,7 @@ const Desktop = () => {
                           ₹1100 onwards
                         </b>
                         <div className="flex flex-row items-center justify-end py-0 pr-0 pl-2.5 text-2xs-8 border-l-[1px] border-solid border-deepskyblue">
-                        <NextLink href="/buy">
+                        <NextLink href="/panel">
   <button className="relative leading-[16px] uppercase bg-ec1066 text-white py-2 px-4 rounded-md bg-pink-600" >
     Buy now
   </button>
@@ -213,7 +213,7 @@ const Desktop = () => {
                           ₹2999 Onwards
                         </b>
                         <div className="flex flex-row items-center justify-end py-0 pr-0 pl-2.5 text-2xs-8 border-l-[1px] border-solid border-deepskyblue">
-                        <NextLink href="/buy">
+                        <NextLink href="/panel">
   <button className="relative leading-[16px] uppercase bg-ec1066 text-white py-2 px-4 rounded-md bg-pink-600" >
     Buy now
   </button>

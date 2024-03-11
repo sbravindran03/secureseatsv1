@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { useRouter } from "next/router";
 import DatePicker from "react-datepicker";
+import NextLink from 'next/link'; 
 import "react-datepicker/dist/react-datepicker.css";
 
 const EventLink = () => {
@@ -47,22 +48,16 @@ const EventLink = () => {
           </button>
         </div>
       </div>
-      <button
-                className="cursor-pointer [border:none] pt-[11px] pb-3 pr-[31px] pl-[30px] bg-khaki-100 w-[113.6px] rounded-[2.53px] overflow-hidden shrink-0 flex flex-row items-center justify-center box-border hover:bg-khaki-300"
-                onClick={onLinkButtonClick}
-              >
-                <div className="flex-1 relative text-base-2 tracking-[2.53px] leading-[17.69px] uppercase font-functional-button-b2 text-black text-center shrink-0">
-                  back
-                </div>
-              </button>
-      <button
-                className="cursor-pointer [border:none] pt-[11px] pb-3 pr-[31px] pl-[30px] bg-khaki-100 rounded-[2.53px] overflow-hidden flex flex-row items-center justify-center hover:bg-khaki-300"
-                onClick={onLinkButton1Click}
-              >
-                <div className="relative text-base-2 tracking-[2.53px] leading-[17.69px] uppercase font-functional-button-b2 text-black text-center whitespace-nowrap">
-                  BOOK
-                </div>
-              </button>
+      <NextLink href="/panel">
+  <button className="relative leading-[16px] uppercase bg-ec1066 text-white py-2 px-4 rounded-md bg-yellow-500" >
+    Back
+  </button>
+</NextLink>
+              <NextLink href="/buy">
+  <button className="relative leading-[16px] uppercase bg-ec1066 text-white py-2 px-4 rounded-md bg-pink-600" >
+    Buy now
+  </button>
+</NextLink>
     </div>
   );
 };
